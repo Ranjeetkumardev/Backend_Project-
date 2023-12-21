@@ -15,6 +15,13 @@ app.use(express.static("Public")) // for uploding/comming file or folder
 app.use(cookieParser()) // reading cookies only by browser bo read kar sakta h bo remove kar sakta h
 
 
+//routes import
+import userRouter from './routes/user.routes.js'
+
+//routes declaration
+app.use("/api/v1/users", userRouter)
+
+// http://localhost:8000/api/v1/users/register
 
 
 export {app} 
